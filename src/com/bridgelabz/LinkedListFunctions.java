@@ -2,32 +2,47 @@ package com.bridgelabz;
 
 public class LinkedListFunctions {
     Node head;
-    public void addFirst(int data) {
-        Node newNode = new Node(data);
-        newNode.next = head;
-        head = newNode;
+    Node tail;
+    public void addElementAtFirst(int data){
+        Node node = new Node(data);
+        if (head == null){
+            head = node;
+            tail = node;
+        }else {
+            node.next = head;
+            head = node;
+        }
+    }
+    public void addElementAtLast(int data){
+        Node node = new Node(data);
+        if (head == null){
+            head = node;
+            tail = node;
+        }else {
+            tail.next = node;
+            tail = node;
+        }
     }
 
-    public void addLast(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
-            return;
+    public void printList(){
+        Node currentNode = head;
+        if (head == null){
+            System.out.println("Linked List is Empty");
         }
-        Node lastNode = head;
-        while (lastNode.next != null) {
-            lastNode = lastNode.next;
-        }
-        lastNode.next = newNode;
-    }
-
-
-    public void printList() {
-        Node currNode = head;
-        while (currNode != null) {
-            System.out.print(currNode.data + " -> ");
-            currNode = currNode.next;
+        while (currentNode != null){
+            System.out.print(currentNode.data+" -> ");
+            currentNode = currentNode.next;
         }
         System.out.println("null");
+    }
+
+    public void insertElementAtPosition(int position, int data) {
+        Node currentNode = head;
+        for (int i = 0; i < (position-1); i++) {
+            currentNode = currentNode.next;
+        }
+        Node node = new Node(data);
+        node.next = currentNode.next;
+        currentNode.next = node;
     }
 }
