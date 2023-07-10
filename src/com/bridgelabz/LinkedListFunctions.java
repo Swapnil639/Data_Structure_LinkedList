@@ -76,4 +76,19 @@ public class LinkedListFunctions {
         }
         return null;
     }
+    public void insertElementAfterAnyKey(int data, int insertElement) {
+        Node node = new Node(insertElement);
+        Node currentNode = search(data);
+        boolean condition = false;
+        if (currentNode != null){
+            node.next = currentNode.next;
+            currentNode.next = node;
+            condition = true;
+        }
+        if (condition==true){
+            System.out.println("Successfully added the element");
+        }else {
+            System.out.println("Element Absent in Linked list");
+        }
+    }
 }

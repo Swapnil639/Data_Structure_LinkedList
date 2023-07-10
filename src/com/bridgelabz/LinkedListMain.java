@@ -30,6 +30,9 @@ public class LinkedListMain {
             System.out.println("Element Present in Linked list");
         }
 
+        linkedList1.insertElementAfterAnyKey(5,78);
+        linkedList1.printList();
+
 
 
 
