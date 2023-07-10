@@ -33,6 +33,9 @@ public class LinkedListMain {
         linkedList1.insertElementAfterAnyKey(5,78);
         linkedList1.printList();
 
+        linkedList1.searchElementThenDelete(5);
+        linkedList1.printList();
+
 
 
 

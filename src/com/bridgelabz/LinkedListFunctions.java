@@ -91,4 +91,13 @@ public class LinkedListFunctions {
             System.out.println("Element Absent in Linked list");
         }
     }
+    public void searchElementThenDelete(int data) {
+        Node secondLastNode = head;
+        Node lastNode = head.next;
+        while (lastNode.data != data) {
+            lastNode = lastNode.next;
+            secondLastNode = secondLastNode.next;
+        }
+        secondLastNode.next = lastNode.next;
+    }
 }
