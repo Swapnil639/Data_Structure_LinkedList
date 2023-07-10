@@ -24,6 +24,13 @@ public class LinkedListMain {
         linkedList1.lastElementDelete();
         linkedList1.printList();
 
+        if ( linkedList1.search(30) == null){
+            System.out.println("Element Absent in Linked list");
+        }else {
+            System.out.println("Element Present in Linked list");
+        }
+
+
 
 
     }

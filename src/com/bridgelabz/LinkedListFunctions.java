@@ -15,7 +15,7 @@ public class LinkedListFunctions {
     }
     public void addElementAtLast(int data){
         Node node = new Node(data);
-        if (head == null){
+        if(head == null){
             head = node;
             tail = node;
         }else {
@@ -65,5 +65,15 @@ public class LinkedListFunctions {
             currentNode.next = null;
             tail = currentNode;
         }
+    }
+    public Node search(int data){
+        Node currentNode = head;
+        while (currentNode != null){
+            if (currentNode.data == data){
+                return currentNode;
+            }
+            currentNode = currentNode.next;
+        }
+        return null;
     }
 }
