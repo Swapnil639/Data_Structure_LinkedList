@@ -15,5 +15,9 @@ public class LinkedListMain{
         linkedList1.printList();
         linkedList1.insertElementAtPosition(2,5);
         linkedList1.printList();
+
+        linkedList1.firstElementDelete();
+        linkedList1.printList();
+
     }
 }

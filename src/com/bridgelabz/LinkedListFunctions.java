@@ -45,4 +45,10 @@ public class LinkedListFunctions {
         node.next = currentNode.next;
         currentNode.next = node;
     }
+    public void firstElementDelete(){
+        if (head == null){
+            System.out.println("Linked list is Empty");
+        }
+        head = head.next;
+    }
 }
